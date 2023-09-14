@@ -9,6 +9,7 @@
     <meta name="author" content="Jonas Moreira">
     <title>Hotel SI</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./assets/css/style.css" -->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <style>
@@ -44,6 +45,7 @@
 </head>
 
 <body>
+    
     <div class="d-flex flex-nowrap">
         <!-- Conteúdo da barra lateral -->
 
@@ -60,12 +62,13 @@
                         Home
                     </a>
                 </li>
+            
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown text-white" href="#" role="button" data-bs-toggle="dropdown">
+                    <a class="nav-link dropdown-togle text-white" href="#" role="button" data-bs-toggle="dropdown">
                         <i class="bi bi-person-badge me-2"></i>
                         Reserva
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu flex-column">
                         <li><a class="dropdown-item" href="?page=nova_reserva">Nova</a></li>
                         <li><a class="dropdown-item" href="?page=listar_reserva">Listar</a></li>
                     </ul>
