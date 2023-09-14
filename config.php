@@ -3,7 +3,7 @@
     define('HOST', 'localhost');
     define('USER','root');
     define('PASS','');
-    define('BASE','hotel');
+    define('BASE','hotel7');
 
     $conn = new mysqli(HOST, USER, PASS, BASE);
     if ($conn->connect_errno){
