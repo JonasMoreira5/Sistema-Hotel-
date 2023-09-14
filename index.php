@@ -46,7 +46,7 @@
 <body>
     <div class="d-flex flex-nowrap">
         <!-- Conteúdo da barra lateral -->
-        
+
         <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                 <!-- adicionar imagem da logo -->
@@ -67,7 +67,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="?page=listar-reserva" class="nav-link text-white" href="">
+                    <a class="nav-link text-white" href="listar-reserva.php">
                         <i class="bi bi-card-checklist me-2"></i>
                         Lista de Reservas
                     </a>
@@ -127,69 +127,69 @@
             <div class="row">
                 <div class="col mt-5">
                     <?php
-          include("config.php");
-          switch($_REQUEST["page"]){
-              case "novo_cliente":
-                  include("novo-cliente.php");
-                  break;
-              case "listar_cliente":
-                  include("listar-cliente.php");
-                  break;
-              case "salvar_cliente":
-                  include("salvar-cliente.php");
-                  break;
-              case "editar_cliente":
-                  include("editar-cliente.php");
-                  break;
-              case "nova_categoria":
-                  include("nova-categoria.php");
-                  break;
-              case "listar_categoria":
-                  include("listar-categoria.php");
-                  break;
-              case "salvar_categoria":
-                  include("salvar-categoria.php");
-                  break;
-              case "editar_categoria":
-                  include("editar-categoria.php");
-                  break;
-              case "novo_quarto":
-                  include("novo-quarto.php");
-                  break;
-              case "listar_quarto":
-                  include("listar-quarto.php");
-                  break;
-              case "salvar_quarto":
-                  include("salvar-quarto.php");
-                  break;
-              case "editar_quarto":
-                  include("editar-quarto.php");
-                  break;
-              case "nova_reserva":
-                  include("nova-reserva.php");
-                  break;
-              case "listar_reserva":
-                  include("listar-reserva.php");
-                  break;
-              case "salvar_reserva":
-                  include("salvar-reserva.php");
-                  break;
-              case "editar_reserva":
-                  include("editar-reserva.php");
-                  break;
-                  
-              default:
-                ?>
-                    <div class="row marcador align-items-center">
-                        <div class="col mx-auto text-center">
-                            <figure class="figure">
-                                <img src="assets\img\logo.png" class="figure-img img-fluid rounded" alt="...">
-                            </figure>
-                        </div>
-                    </div>
-                    <?php
-          }
-        ?>
+                        include("config.php");
+                        switch($_REQUEST["page"]){
+                            case "novo_cliente":
+                                include("novo-cliente.php");
+                                break;
+                            case "listar_cliente":
+                                include("listar-cliente.php");
+                                break;
+                            case "salvar_cliente":
+                                include("salvar-cliente.php");
+                                break;
+                            case "editar_cliente":
+                                include("editar-cliente.php");
+                                break;
+                            case "nova_categoria":
+                                include("nova-categoria.php");
+                                break;
+                            case "listar_categoria":
+                                include("listar-categoria.php");
+                                break;
+                            case "salvar_categoria":
+                                include("salvar-categoria.php");
+                                break;
+                            case "editar_categoria":
+                                include("editar-categoria.php");
+                                break;
+                            case "novo_quarto":
+                                include("novo-quarto.php");
+                                break;
+                            case "listar_quarto":
+                                include("listar-quarto.php");
+                                break;
+                            case "salvar_quarto":
+                                include("salvar-quarto.php");
+                                break;
+                            case "editar_quarto":
+                                include("editar-quarto.php");
+                                break;
+                            case "nova_reserva":
+                                include("nova-reserva.php");
+                                break;
+                            case "listar_reserva":
+                                include("listar-reserva.php");
+                                break;
+                            case "salvar_reserva":
+                                include("salvar-reserva.php");
+                                break;
+                            case "editar_reserva":
+                                include("editar-reserva.php");
+                                break;
+                                
+                            default:
+                             ?>
+                                <div class="row marcador align-items-center">
+                                    <div class="col mx-auto text-center">
+                                        <figure class="figure">
+                                            <img src="assets\img\logo.png" class="figure-img img-fluid rounded" alt="...">
+                                        </figure>
+                                    </div>
+                                </div>
+                             <?php
+                            }
+                    ?>
                 </div>
             </div>
         </main>

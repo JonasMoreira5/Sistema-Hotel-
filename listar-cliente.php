@@ -1,7 +1,7 @@
 <h1>Lista de Clientes</h1>
 
 <?php
-    $sql = "select * from cliente";
+    $sql = "SELECT * FROM cliente";
 
     $res = $conn->query($sql);
 
@@ -26,9 +26,10 @@
             
             <button onclick=\"location.href='?page=editar_cliente&id=".$row->cpf."'\" class='btn btn-success'>Editar</button>
             
-            <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar_cliente&acao=excluir&id=".$row->cpf."'}else{false;}\" class='btn btn-danger'>Excluir</button>
+            <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar_cliente&acao=excluir&id=".$row->cpf."'}else{false;}\"
+            class='btn btn-danger'>Excluir</button>
             
-            </td>";
+                </td>";
             print "</tr>";
         }
         print "</table>";

@@ -1,6 +1,6 @@
 <h1>Novo Cliente</h1>
 
-<form action="?page=salvar_cliente" method="post">
+<form action="?page=salvar_cliente" method="POST">
     <input type="hidden" name="acao" value="cadastrar">
     <div class="mb-3">
         <label>CPF:</label>

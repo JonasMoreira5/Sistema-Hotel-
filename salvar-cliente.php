@@ -7,7 +7,8 @@
             $telefone = $_POST["contato"];
             $email = $_POST["email"];
             
-            $sql = "insert into cliente (cpf, nome, contato, email) values ('{$cpf}','{$nome}','{$telefone}','{$email}')";
+            $sql = "INSERT INTO cliente (cpf, nome, contato,
+             email) values ('{$cpf}','{$nome}','{$telefone}','{$email}')";
                 
             $res = $conn->query($sql);
             
@@ -27,12 +28,14 @@
             $telefone = $_POST["contato"];
             $email = $_POST["email"];
             
-            $sql = "update cliente set nome='{$nome}', contato='{$telefone}', email='{$email}' where cpf=".$_REQUEST["id"];
+            $sql = "UPDATE cliente SET nome='{$nome}',
+                        contato='{$telefone}',
+                        email='{$email}' WHERE id=".$_REQUEST["cpf"];
             
             $res = $conn->query($sql);
             
             if($res == true){
-                print "<script>alert('Alteração OK')</script>";
+                print "<script>alert('Editado com sucesso')</script>";
                 print "<script>location.href='?page=listar_cliente';</script>";
             }else{
                 print "<script>alert('ERRO!')</script>";
@@ -43,7 +46,7 @@
             
         case 'excluir':
             
-            $sql = "delete from cliente where cpf=".$_REQUEST["id"];
+            $sql = "DELETE FROM cliente WHERE cpf=".$_REQUEST["id"];
             
             $res = $conn->query($sql);
             

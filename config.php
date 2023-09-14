@@ -10,5 +10,5 @@
         echo "falha ao conectar: (". $conn->connect_errno . ")" . $conn->connect_errno;
     }
     else
-        echo "Conectado ao Banco de Dados";
+        #echo "Conectado ao Banco de Dados";
 ?>
