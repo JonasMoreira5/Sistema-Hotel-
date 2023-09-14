@@ -60,11 +60,15 @@
                         Home
                     </a>
                 </li>
-                <li>
-                    <a href="#" class="nav-link text-white">
-                        <i class="bi bi-wrench-adjustable me-2"></i>
-                        Reservar
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown text-white" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-person-badge me-2"></i>
+                        Reserva
                     </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="?page=nova_reserva">Nova</a></li>
+                        <li><a class="dropdown-item" href="?page=listar_reserva">Listar</a></li>
+                    </ul>
                 </li>
                 <li>
                     <a class="nav-link text-white" href="listar-reserva.php">
