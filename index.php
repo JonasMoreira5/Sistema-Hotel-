@@ -45,7 +45,7 @@
 </head>
 
 <body>
-    
+
     <div class="d-flex flex-nowrap">
         <!-- Conteúdo da barra lateral -->
 
@@ -62,7 +62,7 @@
                         Home
                     </a>
                 </li>
-            
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-togle text-white" href="#" role="button" data-bs-toggle="dropdown">
                         <i class="bi bi-person-badge me-2"></i>
@@ -105,8 +105,8 @@
                         Categoria
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="?page=novo_quarto">Novo</a></li>
-                        <li><a class="dropdown-item" href="?page=listar_quarto">Listar</a></li>
+                        <li><a class="dropdown-item" href="?page=nova_categoria">Nova</a></li>
+                        <li><a class="dropdown-item" href="?page=listar_categoria">Listar</a></li>
                     </ul>
                 </li>
             </ul>
@@ -118,24 +118,24 @@
                     <strong>Admin</strong>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                    <li><a class="dropdown-item" href="#">Configurações</a></li>
+                    <li><a class="dropdown-item" href="?page=abrir-config">Configurações</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#">Sair</a></li>
+                    <li><a class="dropdown-item" href="index.php">Sair</a></li>
                 </ul>
             </div>
         </div>
         <div class="b-example-divider b-example-vr"></div>
         <script src="assets/js/bootstrap.bundle.min.js"></script>
 
-        <main class="container">
+        <div class="container">
             <!-- Conteúdo principal -->
             <div class="row">
                 <div class="col mt-5">
                     <?php
                         include("config.php");
-                        switch($_REQUEST["page"]){
+                        switch(@$_REQUEST["page"]){
                             case "novo_cliente":
                                 include("novo-cliente.php");
                                 break;
@@ -184,22 +184,25 @@
                             case "editar_reserva":
                                 include("editar-reserva.php");
                                 break;
+                            case "abrir-config":
+                                include("configuracao.php");
+                                break;
                                 
                             default:
                              ?>
-                                <div class="row marcador align-items-center">
-                                    <div class="col mx-auto text-center">
-                                        <figure class="figure">
-                                            <img src="assets\img\logo.png" class="figure-img img-fluid rounded" alt="...">
-                                        </figure>
-                                    </div>
-                                </div>
-                             <?php
+                    <div class="row marcador align-items-center">
+                        <div class="col mx-auto text-center">
+                            <figure class="figure">
+                                <img src="assets\img\logo.png" class="figure-img img-fluid rounded" alt="...">
+                            </figure>
+                        </div>
+                    </div>
+                    <?php
                             }
                     ?>
                 </div>
             </div>
-        </main>
+        </div>
         <script src="assets/js/sidebars.js"></script>
 </body>
 

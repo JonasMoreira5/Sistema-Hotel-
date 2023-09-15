@@ -1,7 +1,7 @@
 <h1>Lista de Reservas</h1>
 
 <?php
-    $sql = "select c.nome as nome, q.descricao as descricao, DATE_FORMAT(r.dt_inicial, '%d/%m/%Y') as dt_inicial, DATE_FORMAT(r.dt_final, '%d/%m/%Y') as dt_final, cat.valor from reserva as r
+    $sql = "SELECT c.nome AS nome, q.descricao AS descricao, DATE_FORMAT(r.dt_inicial, '%d/%m/%Y') AS dt_inicial, DATE_FORMAT(r.dt_final, '%d/%m/%Y') as dt_final, cat.valor from reserva as r
 inner join cliente as c on c.cpf=r.cpf
 inner join quarto as q on q.id_quarto=r.id_quarto
 inner join categoria as cat on cat.cat_id=q.idcategoria";

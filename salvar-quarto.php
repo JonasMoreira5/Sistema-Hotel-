@@ -5,7 +5,7 @@
             $desc = $_POST["desc"];
             $categoria = $_POST["categoria"];
             
-            $sql = "insert into quarto (descricao, idcategoria) values ('{$desc}','{$categoria}')";
+            $sql = " into quarto (descricao, idcategoria) values ('{$desc}','{$categoria}')";
                 
             $res = $conn->query($sql);
             
