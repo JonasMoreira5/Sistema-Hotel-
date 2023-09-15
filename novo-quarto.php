@@ -1,24 +1,38 @@
 <h1>Novo Quarto</h1>
+
 <?php
-    $sql = "select * from categoria";
+// Consulta para buscar todas as categorias
+$sql = "SELECT * FROM categoria";
 
-    $res = $conn->query($sql);
+// Executa a consulta
+$res = $conn->query($sql);
 
-    $qtd = $res->num_rows;
+// Obtém a quantidade de categorias retornadas
+$qtd = $res->num_rows;
 ?>
+
 <form action="?page=salvar_quarto" method="post">
     <input type="hidden" name="acao" value="cadastrar">
+    
+    <!-- Campo para Descrição do Quarto -->
     <div class="mb-3">
         <label>Descrição:</label>
         <input type="text" name="desc" class="form-control">
     </div>
+
+    <!-- Dropdown para seleção de Categoria -->
     <div class="mb-3">
         <label>Categoria:</label>
         <select name="categoria" class="form-control">
-        <?php while($row = $res->fetch_object()){ ?>
-          <option value="<?php print $row->cat_id ?>"><?php print $row->descricao ?></option>
-        <?php } ?>
+            <option value="" selected>Selecione uma categoria</option>
+            <?php while($row = $res->fetch_object()){ ?>
+                <option value="<?php echo $row->cat_id; ?>">
+                    <?php echo $row->descricao; ?>
+                </option>
+            <?php } ?>
         </select>
     </div>
-        <button type="submit" class="btn btn-primary">Salvar</button>
+
+    <!-- Botão de envio do formulário -->
+    <button type="submit" class="btn btn-primary">Salvar</button>
 </form>
