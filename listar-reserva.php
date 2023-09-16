@@ -2,7 +2,10 @@
 <h1>Lista de Reservas</h1>
 
 <?php
+<<<<<<< HEAD
     // Consulta SQL para buscar todas as reservas, clientes, quartos e suas respectivas categorias
+=======
+>>>>>>> 23fcb1eb01859ecc6b995b291424327126a80044
     $sql = "SELECT c.nome AS nome, q.descricao AS descricao, DATE_FORMAT(r.dt_inicial, '%d/%m/%Y') AS dt_inicial, DATE_FORMAT(r.dt_final, '%d/%m/%Y') as dt_final, cat.valor from reserva as r
 inner join cliente as c on c.cpf=r.cpf
 inner join quarto as q on q.id_quarto=r.id_quarto
