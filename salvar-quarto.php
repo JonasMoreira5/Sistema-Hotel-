@@ -5,7 +5,7 @@
             $desc = $_POST["desc"];
             $categoria = $_POST["categoria"];
             
-            $sql = " into quarto (descricao, idcategoria) values ('{$desc}','{$categoria}')";
+            $sql = " INTO quarto (descricao, idcategoria) VALUES ('{$desc}','{$categoria}')";
                 
             $res = $conn->query($sql);
             
@@ -23,7 +23,7 @@
             $desc = $_POST["desc"];
             $categoria = $_POST["categoria"];
             
-            $sql = "update quarto set descricao='{$desc}', idcategoria='{$categoria}' where id_quarto=".$_REQUEST["id"];
+            $sql = "UPDATE quarto SET descricao='{$desc}', idcategoria='{$categoria}' WHERE id_quarto=".$_REQUEST["id"];
             
             $res = $conn->query($sql);
             
@@ -39,7 +39,7 @@
             
         case 'excluir':
             
-            $sql = "delete from quarto where id_quarto=".$_REQUEST["id"];
+            $sql = "DELETE FROM quarto WHERE id_quarto=".$_REQUEST["id"];
             
             $res = $conn->query($sql);
             

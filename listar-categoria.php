@@ -1,7 +1,7 @@
 <h1>Categorias Existentes</h1>
 
 <?php
-    $sql = "select * from categoria";
+    $sql = "SELECT * FROM categoria";
 
     $res = $conn->query($sql);
 

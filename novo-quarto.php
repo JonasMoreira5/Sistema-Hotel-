@@ -6,7 +6,7 @@
 
     $qtd = $res->num_rows;
 ?>
-<form action="?page=salvar_quarto" method="post">
+<form action="?page=salvar_quarto" method="POST">
     <input type="hidden" name="acao" value="cadastrar">
     <div class="mb-3">
         <label>Descrição:</label>
@@ -15,10 +15,12 @@
     <div class="mb-3">
         <label>Categoria:</label>
         <select name="categoria" class="form-control">
-        <?php while($row = $res->fetch_object()){ ?>
-          <option value="<?php print $row->cat_id ?>"><?php print $row->descricao ?></option>
-        <?php } ?>
+            <?php
+                while($row = $res->fetch_object()){
+             ?>
+            <option value="<?php print $row->cat_id ?>"><?php print $row->descricao ?></option>
+            <?php } ?>
         </select>
     </div>
-        <button type="submit" class="btn btn-primary">Salvar</button>
+    <button type="submit" class="btn btn-primary">Salvar</button>
 </form>
