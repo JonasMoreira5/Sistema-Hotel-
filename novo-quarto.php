@@ -10,13 +10,12 @@ $res = $conn->query($sql);
 // Obtém a quantidade de categorias retornadas
 $qtd = $res->num_rows;
 ?>
-<<<<<<< HEAD
 <form action="?page=salvar_quarto" method="POST">
-=======
 
 <form action="?page=salvar_quarto" method="post">
->>>>>>> 348cbf835ebdcd188a207b1a7a01595fd6c09a09
+
     <input type="hidden" name="acao" value="cadastrar">
+    
     
     <!-- Campo para Descrição do Quarto -->
     <div class="mb-3">
@@ -25,10 +24,10 @@ $qtd = $res->num_rows;
     </div>
 
     <!-- Dropdown para seleção de Categoria -->
-    <div class="mb-3">
+    <div class="mb-5">
         <label>Categoria:</label>
-        <select name="categoria" class="form-control">
-<<<<<<< HEAD
+        <select name="categoria"   required="required"  class="form-control">
+        <option value="" selected>Selecione uma categoria</option>
             <?php
                 while($row = $res->fetch_object()){
              ?>
@@ -36,9 +35,10 @@ $qtd = $res->num_rows;
             <?php } ?>
         </select>
     </div>
-    <button type="submit" class="btn btn-primary">Salvar</button>
+    <button type="submit"  required="required" class="btn btn-primary">Salvar</button>
+
 </form>
-=======
+<!-- <form>
             <option value="" selected>Selecione uma categoria</option>
             <?php while($row = $res->fetch_object()){ ?>
                 <option value="<?php echo $row->cat_id; ?>">
@@ -48,7 +48,6 @@ $qtd = $res->num_rows;
         </select>
     </div>
 
-    <!-- Botão de envio do formulário -->
+    Botão de envio do formulário
     <button type="submit" class="btn btn-primary">Salvar</button>
-</form>
->>>>>>> 348cbf835ebdcd188a207b1a7a01595fd6c09a09
+</form> -->
