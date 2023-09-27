@@ -74,7 +74,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a class="nav-link text-white" href="listar-reserva.php">
+                    <a class="nav-link text-white" href="?page=listar_reserva">
                         <i class="bi bi-card-checklist me-2"></i>
                         Lista de Reservas
                     </a>

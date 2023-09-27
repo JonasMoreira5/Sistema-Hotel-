@@ -5,12 +5,12 @@
 $sql = "SELECT c.nome AS nome, 
                q.descricao AS descricao, 
                DATE_FORMAT(r.dt_inicial, '%d/%m/%Y') AS dt_inicial, 
-               DATE_FORMAT(r.dt_final, '%d/%m/%Y') as dt_final, 
+               DATE_FORMAT(r.dt_final, '%d/%m/%Y') AS dt_final, 
                cat.valor 
-        FROM reserva as r
-        INNER JOIN cliente as c ON c.cpf=r.cpf
-        INNER JOIN quarto as q ON q.id_quarto=r.id_quarto
-        INNER JOIN categoria as cat ON cat.cat_id=q.idcategoria";
+        FROM reserva AS r
+        INNER JOIN cliente AS c ON c.cpf=r.cpf
+        INNER JOIN quarto AS q ON q.id_quarto=r.id_quarto
+        INNER JOIN categoria AS cat ON cat.cat_id=q.idcategoria";
 
 $res = $conn->query($sql);
 $qtd = $res->num_rows;

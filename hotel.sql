@@ -34,3 +34,7 @@ CREATE TABLE reserva
     CONSTRAINT fk_res_cli FOREIGN KEY (cpf) REFERENCES cliente (cpf),  -- Restrição de chave estrangeira para cliente
     CONSTRAINT fk_res_qua FOREIGN KEY (id_quarto) REFERENCES quarto (id_quarto)  -- Restrição de chave estrangeira para quarto
 );
+
+-- TO DO// tabela serviços
+
+-- TO DO// tabela funcionarios
