@@ -16,13 +16,9 @@ $res_quarto = $conn->query($sql_quarto);
 
 <form action="?page=salvar_reserva" method="post">
     <input type="hidden" name="acao" value="cadastrar">
-<<<<<<< HEAD
-
-=======
     
     <!-- Campo para Data de Entrada -->
->>>>>>> 348cbf835ebdcd188a207b1a7a01595fd6c09a09
-    <div class="mb-3">
+    <div class="mb-3">  
         <label>Data de Entrada:</label>
         <input type="date" name="entrada" class="form-control">
     </div>
@@ -39,14 +35,9 @@ $res_quarto = $conn->query($sql_quarto);
         <select name="cliente" required class="form-control">
             <option value="" selected>Selecione o cliente</option>
             <?php while($row_cliente = $res_cliente->fetch_object()){ ?>
-<<<<<<< HEAD
-            <option value="<?php print $row_cliente->cpf ?>"><?php print $row_cliente->nome ?>
-            </option>
-=======
                 <option value="<?php echo $row_cliente->cpf; ?>">
                     <?php echo $row_cliente->nome; ?>
                 </option>
->>>>>>> 348cbf835ebdcd188a207b1a7a01595fd6c09a09
             <?php } ?>
         </select>
     </div>
@@ -56,16 +47,9 @@ $res_quarto = $conn->query($sql_quarto);
         <label>Quarto:</label>
         <select name="quarto" required class="form-control">
             <option value="" selected>Selecione o quarto</option>
-<<<<<<< HEAD
-            <?php
-            while($row_quarto = $res_quarto->fetch_object()){ ?>
-                <option value="<?php print $row_quarto->id_quarto ?>">
-                    <?php print $row_quarto->descricao.' - '.$row_quarto->idcategoria.' - '.$row_quarto->valor ?>
-=======
             <?php while($row_quarto = $res_quarto->fetch_object()){ ?>
                 <option value="<?php echo $row_quarto->id_quarto; ?>">
                     <?php echo $row_quarto->desc_quarto . ' - ' . $row_quarto->desc_categoria . ' - ' . $row_quarto->valor; ?>
->>>>>>> 348cbf835ebdcd188a207b1a7a01595fd6c09a09
                 </option>
             <?php } ?>
         </select>
