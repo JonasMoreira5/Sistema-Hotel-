@@ -132,7 +132,7 @@
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="index.php">Sair</a></li>
+                    <li><a class="dropdown-item" href="?page=sair-modulo">Sair</a></li>
                 </ul>
             </div>
         </div>
@@ -197,7 +197,9 @@
                             case "abrir-config":
                                 include("configuracao.php");
                                 break;
-                                
+                            case "sair-modulo":
+                                include("tela-login.php");
+                                break;
                             default:
                              ?>
                     <div class="row marcador align-items-center">
