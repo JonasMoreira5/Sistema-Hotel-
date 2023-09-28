@@ -116,7 +116,7 @@
                         Serviços
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="?page=nova_categoria">Novo</a></li>
+                        <li><a class="dropdown-item" href="?page=servico_quarto">Novo</a></li>
                     </ul>
                 </li>
             </ul>
@@ -199,6 +199,9 @@
                                 break;
                             case "sair-modulo":
                                 include("tela-login.php");
+                                break;
+                            case "servico_quarto";
+                                include("servico-quartos.php");
                                 break;
                             default:
                              ?>
