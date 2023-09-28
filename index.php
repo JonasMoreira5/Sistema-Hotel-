@@ -109,6 +109,16 @@
                         <li><a class="dropdown-item" href="?page=listar_categoria">Listar</a></li>
                     </ul>
                 </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown text-white" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-person-badge me-2"></i>
+                        Serviços
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="?page=nova_categoria">Novo</a></li>
+                    </ul>
+                </li>
             </ul>
             <hr>
             <div class="dropdown">
