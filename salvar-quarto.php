@@ -5,12 +5,12 @@
             $desc = $_POST["desc"];
             $categoria = $_POST["categoria"];
             
-            $sql = " INTO quarto (descricao, idcategoria) VALUES ('{$desc}','{$categoria}')";
+            $sql = "INSERT INTO quarto (descricao, idcategoria) VALUES ('{$desc}','{$categoria}')";
                 
             $res = $conn->query($sql);
             
             if($res == true){
-                print "<script>alert('Cadastro realizado com sucesso!!!');</script>";
+                print "<script>alert('Cadastro realizado com sucesso!!!')</script>";
                 print "<script>location.href='?page=listar_quarto'</script>";
             }else{
                 print "<script>alert('Erro ao realizar cadastro!!!');</script>";
