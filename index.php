@@ -70,7 +70,6 @@
                     </a>
                     <ul class="dropdown-menu flex-column">
                         <li><a class="dropdown-item" href="?page=nova_reserva">Nova</a></li>
-                        <li><a class="dropdown-item" href="?page=listar_reserva">Listar</a></li>
                     </ul>
                 </li>
                 <li>
