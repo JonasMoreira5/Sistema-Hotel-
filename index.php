@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Jonas Moreira">
     <title>Hotel SI</title>
+    
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="./assets/css/style.css" -->
 
@@ -123,8 +124,8 @@
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
                     data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="img" width="32" height="32" class="rounded-circle me-2">
-                    <strong>Admin</strong>
+                    <img src="assets\img\funcionario.png" alt="img" width="32" height="32" class="rounded-circle me-2">
+                    <strong>Funcionário</strong>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
                     <li><a class="dropdown-item" href="?page=abrir-config">Configurações</a></li>
