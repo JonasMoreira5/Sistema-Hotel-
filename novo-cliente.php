@@ -9,25 +9,25 @@
     <!-- Campo para inserir o CPF do cliente -->
     <div class="mb-3">
         <label>CPF:</label>
-        <input type="text" name="cpf" class="form-control">
+        <input type="text" name="cpf" required class="form-control">
     </div>
     
     <!-- Campo para inserir o nome do cliente -->
     <div class="mb-3">
         <label>Nome:</label>
-        <input type="text" name="nome" class="form-control">
+        <input type="text" name="nome" required class="form-control">
     </div>
     
     <!-- Campo para inserir o telefone do cliente -->
     <div class="mb-3">
         <label>Telefone:</label>
-        <input type="tel" name="contato" class="form-control">
+        <input type="tel" name="contato" required class="form-control">
     </div>
     
     <!-- Campo para inserir o email do cliente -->
     <div class="mb-3">
         <label>Email:</label>
-        <input type="email" name="email" class="form-control">
+        <input type="email" name="email" required class="form-control">
     </div>
     
     <!-- Botão para enviar o formulário -->
