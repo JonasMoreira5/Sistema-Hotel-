@@ -197,9 +197,6 @@
                             case "abrir-config":
                                 include("configuracao.php");
                                 break;
-                            case "sair-modulo":
-                                include("tela-login.php");
-                                break;
                             case "servico_quarto";
                                 include("servico-quartos.php");
                                 break;
