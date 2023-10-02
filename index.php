@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Jonas Moreira">
     <title>Hotel SI</title>
-    
+
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="./assets/css/style.css" -->
 
@@ -53,7 +53,9 @@
         <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                 <!-- adicionar imagem da logo -->
-                <span class="fs-4">Hotel SI</span>
+                <img src="assets\img\hotel-logo.jpg" class="figure-img img-fluid rounded me-4"
+                    style="width: 100px; height: 100px" alt="">
+                <span class="fs-4">Hotel & Pousada</span>
             </a>
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
@@ -217,5 +219,10 @@
         </div>
         <script src="assets/js/sidebars.js"></script>
 </body>
+<footer>
+    <div class="alert alert-danger" role="alert">
+        Um simples alerta danger. Olha só!
+    </div>
+</footer>
 
 </html>
