@@ -83,7 +83,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown text-white" href="#" role="button" data-bs-toggle="dropdown">
-                        <i class="bi bi-person-badge me-2"></i>
+                        <i class="bi bi-person-circle me-2"></i>
                         Cliente
                     </a>
                     <ul class="dropdown-menu">
@@ -207,13 +207,15 @@
                     <div class="row marcador align-items-center">
                         <div class="col mx-auto text-center">
                             <figure class="figure">
-                                <img src="assets\img\logo.png" class="figure-img img-fluid rounded" alt="...">
+                                <img src="assets\img\logo.png" class="figure-img img-fluid rounded" style="width: 150px; height: 150px" alt="...">
                             </figure>
                         </div>
                     </div>
+                    
                     <?php
                             }
                     ?>
+
                 </div>
             </div>
         </div>
