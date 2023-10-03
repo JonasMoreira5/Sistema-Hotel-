@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Jonas Moreira">
-    <title>Hotel SI</title>
+    <title>Hotel & Pousada</title>
 
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="./assets/css/style.css" -->
@@ -219,10 +219,5 @@
         </div>
         <script src="assets/js/sidebars.js"></script>
 </body>
-<footer>
-    <div class="alert alert-danger" role="alert">
-        Um simples alerta danger. Olha só!
-    </div>
-</footer>
 
 </html>

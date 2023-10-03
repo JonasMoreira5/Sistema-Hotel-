@@ -27,6 +27,7 @@ switch ($_REQUEST["acao"]) {
             print "<script>location.href='?page=listar_cliente'</script>";
         } else {
             // Exibe uma mensagem de erro e redireciona para a página de listagem de clientes
+            
             print "<script>alert('Erro ao realizar cadastro!!!');</script>";
             print "<script>location.href='?page=listar_cliente'</script>";
         }
