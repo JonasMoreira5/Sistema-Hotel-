@@ -103,7 +103,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown text-white" href="#" role="button" data-bs-toggle="dropdown">
-                        <i class="bi bi-bookmarks-fill"></i>
+                        <i class="bi bi-bookmarks-fill me-2"></i>
                         Categoria
                     </a>
                     <ul class="dropdown-menu">
@@ -114,7 +114,8 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown text-white" href="#" role="button" data-bs-toggle="dropdown">
-                        <i class="bi bi-person-badge me-2"></i>
+                        <!-- <i class="bi bi-person-badge me-2"></i> -->
+                        <i class="bi bi-text-left me-2"></i>
                         Serviços
                     </a>
                     <ul class="dropdown-menu">
