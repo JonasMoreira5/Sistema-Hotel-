@@ -134,7 +134,7 @@
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="?page=sair-modulo">Sair</a></li>
+                    <li><a class="dropdown-item" href="?page=sair-modulo">Ir para Home</a></li>
                 </ul>
             </div>
         </div>
