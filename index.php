@@ -103,7 +103,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown text-white" href="#" role="button" data-bs-toggle="dropdown">
-                        <i class="bi bi-person-badge me-2"></i>
+                        <i class="bi bi-bookmarks-fill"></i>
                         Categoria
                     </a>
                     <ul class="dropdown-menu">
