@@ -3,12 +3,12 @@
 
 <?php
     // Consulta SQL para buscar todos os quartos e suas respectivas categorias
-    $sql = "select q.descricao as desc_quarto, c.descricao as desc_cat, c.valor from quarto as q inner join categoria as c where idcategoria=cat_id";
+    $sql = "select q.id_quarto, q.descricao as desc_quarto, c.descricao as desc_cat, c.valor from quarto as q inner join categoria as c where idcategoria=cat_id";
 
-    // Executando a consulta SQL e armazenando o resultado na variável $res
+    // // Executando a consulta SQL e armazenando o resultado na variável $res
     $res = $conn->query($sql);
 
-    // Contando o número de registros retornados pela consulta
+    // // Contando o número de registros retornados pela consulta
     $qtd = $res->num_rows;
 
     // Se houver registros, exibe-os em uma tabela
@@ -28,14 +28,11 @@
             print "<td>".$row->valor."</td>";
             print "<td>
             
-            <!-- Botão para editar o quarto -->
-            <button onclick=\"location.href='?page=editar_quarto&id=".$row->id_quarto."'\" class='btn btn-success'>Editar</button>            
-    
-            
-            <!-- Botão para excluir o quarto com confirmação -->
+            <button onclick=\"location.href='?page=editar_quarto&id=".$row->id_quarto."'\" class='btn btn-success'>Editar</button>
             <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar_quarto&acao=excluir&id=".$row->id_quarto."'}else{false;}\" class='btn btn-danger'>Excluir</button>
-            
+
             </td>";
+
             print "</tr>";
         }
         print "</table>";
