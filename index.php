@@ -206,6 +206,7 @@
                                 break;
                             case "novo_servico":
                                 include("novo-servico.php");
+                                break;
                             default:
                              ?>
                     <div class="row marcador align-items-center">
