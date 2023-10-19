@@ -39,18 +39,37 @@
             
         case 'excluir':
             
-            $sql = "DELETE FROM quarto WHERE id_quarto=".$_REQUEST["id"];
+            // $sql = "DELETE FROM quarto WHERE id_quarto=".$_REQUEST["id"];
             
-            $res = $conn->query($sql);
+            // $res = $conn->query($sql);
             
-            if($res == true){
-                print "<script>alert('Excluido com sucesso!')</script>";
+            // if($res == true){
+            //     print "<script>alert('Excluido com sucesso!')</script>";
+            //     print "<script>location.href='?page=listar_quarto';</script>";
+            // }else{
+            //     print "<script>alert('Erro ao excluir!')</script>";
+            //     print "<script>location.href='?page=listar_quarto';</script>";
+            // }
+            
+            
+            // Antes de eliminar o quarto, deverá cancelar as reservas associadas
+            // Cancela reservas associadas
+
+            $sql = "DELETE FROM reserva WHERE id_quarto =".$_REQUEST["id"];
+            if ($conn->query($sql)) {
+                // Agora pode excluir a sala com segurança
+                print "<script>alert('Removido com sucesso!')</script>";
                 print "<script>location.href='?page=listar_quarto';</script>";
-            }else{
-                print "<script>alert('Erro ao excluir!')</script>";
-                print "<script>location.href='?page=listar_quarto';</script>";
+                $sql = "DELETE FROM quarto WHERE id_quarto =".$_REQUEST["id"];
+                if ($conn->query($sql)) {
+                    print "<script>alert('O quarto e as reservas associadas foram excluídos!')</script>";
+                    // O quarto e as reservas associadas foram excluídos
+                } else {
+                    print "<script>alert('Erro ao excluir!')</script>".$conn->error;
+                    print "<script>location.href='?page=listar_quarto';</script>";
+                }
+            } else {
+                echo "Erro ao cancelar reservas: " . $conn->error;
             }
-            
             break;
     }
-?>
