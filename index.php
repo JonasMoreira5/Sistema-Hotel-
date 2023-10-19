@@ -119,7 +119,7 @@
                         Serviços
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="?page=servico_quarto">Novo</a></li>
+                        <li><a class="dropdown-item" href="?page=novo_servico">Novo</a></li>
                         <li><a class="dropdown-item" href="?page=listar_servico">Listar</a></li>
                     </ul>
                 </li>
@@ -201,9 +201,11 @@
                             case "abrir-config":
                                 include("configuracao.php");
                                 break;
-                            case "listar_servico";
+                            case "listar_servico":
                                 include("listar-servico.php");
                                 break;
+                            case "novo_servico":
+                                include("novo-servico.php");
                             default:
                              ?>
                     <div class="row marcador align-items-center">
