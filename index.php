@@ -120,6 +120,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="?page=servico_quarto">Novo</a></li>
+                        <li><a class="dropdown-item" href="?page=listar_servico">Listar</a></li>
                     </ul>
                 </li>
             </ul>
@@ -200,8 +201,8 @@
                             case "abrir-config":
                                 include("configuracao.php");
                                 break;
-                            case "servico_quarto";
-                                include("servico-quartos.php");
+                            case "listar_servico";
+                                include("listar-servico.php");
                                 break;
                             default:
                              ?>
