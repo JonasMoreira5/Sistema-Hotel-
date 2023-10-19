@@ -43,24 +43,37 @@ switch ($_REQUEST["acao"]) {
         $email = $_POST["email"];
         
         // Cria a consulta SQL para atualizar o registro do cliente com base no CPF
+        // Usa uma declaração preparada para atualizar as informações do cliente
         $sql = "UPDATE cliente 
-                SET nome='{$nome}', contato='{$telefone}', email='{$email}' 
-                WHERE id=".$_REQUEST["cpf"];
+                SET nome=?, contato=?, email=? 
+                WHERE cpf=?";
         
         // Executa a consulta SQL
-        $res = $conn->query($sql);
+        // $res = $conn->query($sql);
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssss", $nome, $telefone, $email, $cpf);
+
+        if ($stmt->execute()) {
+            // Exibir uma mensagem de sucesso e redirecionar para a página da lista de clientes
+            echo "<script>alert('Editado com sucesso');</script>";
+            echo "<script>location.href='?page=listar_cliente';</script>";
+        } else {
+            // Exibir uma mensagem de erro e redirecionar para a página da lista de clientes
+            echo "<script>alert('Erro ao editar o cliente.');</script>";
+            echo "<script>location.href='?page=listar_cliente';</script>";
+        }
         
         // Verifica se a consulta foi bem-sucedida
-        if ($res == true) {
-            // Exibe uma mensagem de sucesso e redireciona para a página de listagem de clientes
-            print "<script>alert('Editado com sucesso')</script>";
-            print "<script>location.href='?page=listar_cliente';</script>";
-        } else {
-            // Exibe uma mensagem de erro e redireciona para a página de listagem de clientes
-            print "<script>alert('ERRO!')</script>";
-            print "<script>location.href='?page=listar_cliente';</script>";
-        }
-        break;
+        // if ($res == true) {
+        //     // Exibe uma mensagem de sucesso e redireciona para a página de listagem de clientes
+        //     print "<script>alert('Editado com sucesso')</script>";
+        //     print "<script>location.href='?page=listar_cliente';</script>";
+        // } else {
+        //     // Exibe uma mensagem de erro e redireciona para a página de listagem de clientes
+        //     print "<script>alert('ERRO!')</script>";
+        //     print "<script>location.href='?page=listar_cliente';</script>";
+        // }
+        // break;
     
     // Caso a ação seja 'excluir'
     case 'excluir':
