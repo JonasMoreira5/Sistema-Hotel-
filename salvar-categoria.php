@@ -1,6 +1,6 @@
 <?php
     $message = "";
-    $redirectTo = "?page=listar_categoria";
+    $redirectTo = "?page=listar_servico";
 
     switch ($_REQUEST["acao"]) {
         case 'cadastrar':

@@ -44,9 +44,8 @@ CREATE TABLE funcionario (
 
 -- TO DO// tabela serviços
 CREATE TABLE Servico (
-    cod_servico INT PRIMARY KEY AUTO_INCREMENT,
-    tipo_servico INT AUTO_INCREMENT,
+    cod_servico INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    tipo_servico VARCHAR(100) NOT NULL,
     valor_servico DECIMAL(4,2) NOT NULL,
-    CONSTRAINT fk_Cliente_cpf FOREIGN KEY (cpf) REFERENCES cliente (cpf),  -- Restrição de chave estrangeira para cliente
-    CONSTRAINT fk_Quarto_id_quarto FOREIGN KEY (id_quarto) REFERENCES quarto (id_quarto)
+    PRIMARY KEY(cod_servico)
 );
