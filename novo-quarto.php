@@ -31,7 +31,7 @@ $qtd = $res->num_rows;
             <?php
                 while($row = $res->fetch_object()){
              ?>
-            <option value="<?php print $row->cat_id ?>"><?php print $row->descricao ?></option>
+            <option value="<?php print $row->id_categoria ?>"><?php print $row->descricao ?></option>
             <?php } ?>
         </select>
     </div>
