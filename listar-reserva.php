@@ -10,7 +10,7 @@ $sql = "SELECT c.nome AS nome,
         FROM reserva AS r
         INNER JOIN cliente AS c ON c.cpf=r.cpf
         INNER JOIN quarto AS q ON q.id_quarto=r.id_quarto
-        INNER JOIN categoria AS cat ON cat.cat_id=q.idcategoria";
+        INNER JOIN categoria AS cat ON cat.idcategoria=r.idcategoria";
 
 $res = $conn->query($sql);
 $qtd = $res->num_rows;
