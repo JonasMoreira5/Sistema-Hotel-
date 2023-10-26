@@ -3,7 +3,9 @@
 
 <?php
     // Consulta SQL para buscar todos os quartos e suas respectivas categorias
-    $sql = "select q.id_quarto, q.descricao as desc_quarto, c.descricao as desc_cat, c.valor from quarto as q inner join categoria as c on where idcategoria=cat_id";
+    $sql = "SELECT q.id_quarto, q.descricao AS desc_quarto, c.descricao AS desc_cat, c.valor 
+    FROM quarto AS q 
+    INNER JOIN categoria AS c ON q.idcategoria = c.id_categoria";
 
     // // Executando a consulta SQL e armazenando o resultado na variável $res
     $res = $conn->query($sql);
