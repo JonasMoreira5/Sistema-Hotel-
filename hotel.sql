@@ -43,9 +43,8 @@ CREATE TABLE funcionario (
 );
 
 -- TO DO// tabela serviços
-CREATE TABLE Servico (
+CREATE TABLE servico (
     cod_servico INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     tipo_servico VARCHAR(100) NOT NULL,
-    valor_servico DECIMAL(4,2) NOT NULL,
-    PRIMARY KEY(cod_servico)
+    valor_servico DECIMAL(4,2) NOT NULL
 );

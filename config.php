@@ -4,7 +4,7 @@
 define('HOST', 'localhost');
 define('USER', 'root');
 define('PASS', '');
-define('BASE', 'hotel7');
+define('BASE', 'hotel');
 
 // Tentando estabelecer uma conexão com o banco de dados
 $conn = new mysqli(HOST, USER, PASS, BASE);
