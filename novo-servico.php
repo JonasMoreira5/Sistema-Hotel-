@@ -35,7 +35,7 @@ $qtd = $res->num_rows;
         <input type="number" name="valor" step="0.010" min="0" max="9999" class="form-control">
     </div>
 
-    <!-- Dropdown para seleção de Categoria -->
+    <!-- Dropdown para seleção de Categoria
     <div class="mb-5">
         <label>Categoria:</label>
         <select name="categoria" required="required"  class="form-control">
@@ -46,7 +46,7 @@ $qtd = $res->num_rows;
             <option value="<?php print $row->cat_id ?>"><?php print $row->descricao ?></option>
             <?php } ?>
         </select>
-    </div>
+    </div> -->
 
     <!-- Botão para enviar o formulário -->
     <button type="submit" class="btn btn-primary">Salvar</button>
