@@ -8,7 +8,7 @@
     });
 </script>
 
-<!-- Formulário para adicionar uma nova categoria de quarto -->
+<!-- Formulário para ad1icionar uma nova categoria de quarto -->
 <form action="?page=salvar_categoria" method="post">
     <!-- Campo oculto para definir a ação como "cadastrar" -->
     <input type="hidden" name="acao" value="cadastrar">
