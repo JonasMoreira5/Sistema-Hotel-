@@ -30,10 +30,10 @@
             print "<td>
             
             <!-- Botão para editar a categoria -->
-            <button onclick=\"location.href='?page=editar_categoria&id=".$row->cat_id."'\" class='btn btn-success'>Editar</button>
+            <button onclick=\"location.href='?page=editar_categoria&id=".$row->id_categoria."'\" class='btn btn-success'>Editar</button>
             
             <!-- Botão para excluir a categoria com confirmação -->
-            <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar_categoria&acao=excluir&id=".$row->cat_id."'}else{false;}\" class='btn btn-danger'>Excluir</button>
+            <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar_categoria&acao=excluir&id=".$row->id_categoria."'}else{false;}\" class='btn btn-danger'>Excluir</button>
             
             </td>";
             print "</tr>";
