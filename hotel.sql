@@ -35,16 +35,9 @@ CREATE TABLE reserva
     CONSTRAINT fk_res_qua FOREIGN KEY (id_quarto) REFERENCES quarto (id_quarto)  -- Restrição de chave estrangeira para quarto
 );
 
--- TO DO// tabela funcionario
-CREATE TABLE funcionario (
-    id_funcionario INT(4) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    login VARCHAR(15) NOT NULL,
-    senha VARCHAR(8) NOT NULL
-);
-
 -- TO DO// tabela serviços
 CREATE TABLE servico (
-    cod_servico INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    cod_servico INT PRIMARY KEY AUTO_INCREMENT,
     tipo_servico VARCHAR(100) NOT NULL,
     valor_servico DECIMAL(4,2) NOT NULL
 );
