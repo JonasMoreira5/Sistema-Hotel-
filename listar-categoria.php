@@ -2,11 +2,8 @@
 <h1>Categorias Existentes</h1>
 
 <?php
-
-    //$sql = "SELECT * FROM categoria";
     // Consulta SQL para buscar todas as categorias
     $sql = "select * from categoria";
-
 
     // Executando a consulta SQL e armazenando o resultado na variável $res
     $res = $conn->query($sql);
