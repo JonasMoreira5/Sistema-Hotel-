@@ -10,9 +10,10 @@ $sql = "SELECT c.nome AS nome,
         FROM reserva AS r
         INNER JOIN cliente AS c ON c.cpf=r.cpf
         INNER JOIN quarto AS q ON q.id_quarto=r.id_quarto
-        INNER JOIN categoria AS cat ON cat.idcategoria=r.idcategoria";
+        INNER JOIN categoria AS cat ON cat.id_categoria=q.idcategoria";
 
 $res = $conn->query($sql);
+
 $qtd = $res->num_rows;
 
 // Verifica se a consulta retornou resultados
@@ -35,8 +36,8 @@ if ($qtd > 0) {
             print "<td>" . $row->dt_inicial . "</td>";
             print "<td>" . $row->dt_final . "</td>";
             print "<td>
-                <button onclick=\"location.href='?page=editar_quarto&id=" . $row->id_quarto . "'\" class='btn btn-success'>Editar</button>
-                <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar_quarto&acao=excluir&id=" . $row->id_quarto . "'}else{false;}\" class='btn btn-danger'>Excluir</button>
+                <button onclick=\"location.href='?page=editar_quarto&id=" . $row->descricao . "'\" class='btn btn-success'>Editar</button>
+                <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar_quarto&acao=excluir&id=" . $row->descricao . "'}else{false;}\" class='btn btn-danger'>Excluir</button>
             </td>";
         print "</tr>";
     }
