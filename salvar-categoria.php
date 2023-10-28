@@ -1,6 +1,6 @@
 <?php
     $message = "";
-    $redirectTo = "?page=listar_servico";
+    $redirectTo = "?page=listar_categoria";
 
     switch ($_REQUEST["acao"]) {
         case 'cadastrar':
@@ -15,11 +15,11 @@
             break;
 
         case 'editar':
-            $sql = "UPDATE categoria SET descricao=?, valor=? WHERE cat_id=?";
+            $sql = "UPDATE categoria SET descricao=?, valor=? WHERE id_categoria=?";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("ssi", $_POST["desc"], $_POST["valor"], $_REQUEST["id"]);
             if ($stmt->execute()) {
-                $message = "Alteração OK";
+                $message = "Alteração feita com sucesso!";
             } else {
                 $message = "Erro ao editar: " . $stmt->error;
             }
