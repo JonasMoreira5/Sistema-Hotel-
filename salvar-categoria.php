@@ -1,5 +1,5 @@
 <?php
-    $message = "";
+    $message="";
     $redirectTo = "?page=listar_categoria";
 
     switch ($_REQUEST["acao"]) {
@@ -19,14 +19,15 @@
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("ssi", $_POST["desc"], $_POST["valor"], $_REQUEST["id"]);
             if ($stmt->execute()) {
-                $message = "Alteração feita com sucesso!";
+                print "<script>alert('Alteração feita com sucesso!')</script>";
             } else {
                 $message = "Erro ao editar: " . $stmt->error;
             }
+            print "<script>location.href='?page=listar_categoria';</script>";
             break;
 
         case 'excluir':
-            $sql = "DELETE FROM categoria WHERE cat_id=?";
+            $sql = "DELETE FROM categoria WHERE id_categoria=?";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("i", $_REQUEST["id"]);
             if ($stmt->execute()) {
@@ -36,6 +37,5 @@
             }
             break;
     }
-
     echo "<script>alert('$message'); location.href='$redirectTo';</script>";
 ?>
