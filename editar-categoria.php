@@ -2,7 +2,7 @@
 
 <?php
     // Consulta SQL para buscar a categoria pelo ID fornecido
-    $sql = "SELECT * FROM categoria WHERE cat_id=" . $_REQUEST["id"];
+    $sql = "SELECT * FROM categoria WHERE id_categoria=" . $_REQUEST["id"];
 
     // Executando a consulta e armazenando o resultado
     $res = $conn->query($sql);
@@ -24,7 +24,7 @@
     <input type="hidden" name="acao" value="editar">
     
     <!-- Campo oculto para armazenar o ID da categoria -->
-    <input type="hidden" name="id" value="<?php print $row->cat_id; ?>">
+    <input type="hidden" name="id" value="<?php print $row->id_categoria; ?>">
 
     <!-- Campo para editar a descrição da categoria -->
     <div class="mb-3">
