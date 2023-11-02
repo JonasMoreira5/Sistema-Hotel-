@@ -21,7 +21,7 @@ $qtd = $res->num_rows;
 ?>
 
 <!-- Formulario para editar a reserva -->
-<form action="?page=salvar_reserva" method="post">
+<form action="?page=salvar_reserva" method="POST">
     <input type="hidden" name="acao" value="editar">
 
     <!-- Campo para Data de Entrada -->
