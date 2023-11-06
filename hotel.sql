@@ -16,14 +16,6 @@ CREATE TABLE Funcionario
     senha VARCHAR(255) NOT NULL,  -- senha do Funcionario
 );
 
--- Criação da tabela categoria
-CREATE TABLE categoria 
-( 
-    id_categoria INT PRIMARY KEY AUTO_INCREMENT,  -- ID da categoria como chave primária e auto-incremento
-    idservico INT; -- Chave estrangeira referenciando a categoria do servico
-    descricao VARCHAR(200) NOT NULL,  -- Descrição da categoria
-    valor DECIMAL(4,2) NOT NULL  -- Valor associado à categoria
-); 
 
 -- Criação da tabela quarto
 CREATE TABLE quarto 
@@ -54,3 +46,12 @@ CREATE TABLE servico (
     cat_id INT -- Chave estrangeira referenciando o servico da categoria
     CONSTRAINT fk_cat_id FOREIGN KEY (cat_id) REFERENCES categoria (idservico)  -- Restrição de chave estrangeira
 );
+
+-- Criação da tabela categoria
+CREATE TABLE categoria 
+( 
+    id_categoria INT PRIMARY KEY AUTO_INCREMENT,  -- ID da categoria como chave primária e auto-incremento
+    idservico INT; -- Chave estrangeira referenciando a categoria do servico
+    descricao VARCHAR(200) NOT NULL,  -- Descrição da categoria
+    valor DECIMAL(4,2) NOT NULL  -- Valor associado à categoria
+); 
