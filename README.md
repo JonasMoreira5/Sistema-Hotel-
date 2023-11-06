@@ -1,4 +1,4 @@
-## Projeto de Criação de Sistema de Gerênciamento de um Hotel para a disciplina de Sistema de Banco de Dados I
+## Sistema de Gerênciamento de um Hotel
 ## Sobre o Projeto
 Este projeto foi desenvolvido tecnicamente por **Jonas Moreira Barbosa** : [linkedin]( https://www.linkedin.com/in/jonas-moreira28 ) - [github]( https://github.com/JonasMoreira5/JonasMoreira5 ) e **Vitor Vasconcelos** : [ linkedin ]( https://www.linkedin.com/in/jonas-moreira28 ) -[ github ]( https://github.com/JonasMoreira5/JonasMoreira5 ) como solução para o projeto final da Disciplina de Bancos de Dados I do Instituto de Ciências Exatas e Tecnologia - ICET-UFAM.
 
