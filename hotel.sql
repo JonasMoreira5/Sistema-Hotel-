@@ -11,7 +11,7 @@ CREATE TABLE cliente
 CREATE TABLE Funcionario 
 (   
     nome VARCHAR(200) NOT NULL,  -- Nome do Funcionario
-    cpf VARCHAR(11) PRIMARY KEY,  -- CPF do Funcionario como chave primária
+    cpf_fun VARCHAR(11) PRIMARY KEY,  -- CPF do Funcionario que fez a reserva como chave primária
     login VARCHAR(255) NOT NULL, -- login do Fucionario
     senha VARCHAR(255) NOT NULL,  -- senha do Funcionario
 );
