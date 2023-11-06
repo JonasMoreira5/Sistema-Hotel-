@@ -51,7 +51,7 @@ CREATE TABLE servico (
 CREATE TABLE categoria 
 ( 
     id_categoria INT PRIMARY KEY AUTO_INCREMENT,  -- ID da categoria como chave primária e auto-incremento
-    idservico INT; -- Chave estrangeira referenciando a categoria do servico
+    idservico INT, -- Chave estrangeira referenciando a categoria do servico
     descricao VARCHAR(200) NOT NULL,  -- Descrição da categoria
     valor DECIMAL(4,2) NOT NULL  -- Valor associado à categoria
 ); 
