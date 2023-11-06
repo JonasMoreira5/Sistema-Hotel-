@@ -1,6 +1,5 @@
 -- Criação da tabela cliente
-CREATE TABLE cliente 
-(    
+CREATE TABLE cliente(    
     cpf VARCHAR(11) PRIMARY KEY,  -- CPF do cliente como chave primária
     nome VARCHAR(200) NOT NULL,  -- Nome do cliente
     contato VARCHAR(11) NOT NULL,  -- Contato telefônico do cliente
@@ -8,14 +7,13 @@ CREATE TABLE cliente
 ); 
 
 -- Criação da tabela Funcionario
-CREATE TABLE Funcionario 
-(   
+CREATE TABLE Funcionario(   
+    id_funcionario INT PRIMARY KEY AUTO_INCREMENT, -- id_funcionario como chave primaria
     nome VARCHAR(200) NOT NULL,  -- Nome do Funcionario
-    cpf_fun VARCHAR(11) PRIMARY KEY,  -- CPF do Funcionario que fez a reserva como chave primária
-    login VARCHAR(255) NOT NULL, -- login do Fucionario
+    cpf VARCHAR(11) NOT NULL,  -- CPF do Funcionario
+    email VARCHAR(255) NOT NULL, -- login do Fucionario
     senha VARCHAR(255) NOT NULL  -- senha do Funcionario
 );
-
 
 -- Criação da tabela quarto
 CREATE TABLE quarto 
@@ -27,15 +25,13 @@ CREATE TABLE quarto
 ); 
 
 -- Criação da tabela reserva
-CREATE TABLE reserva 
-(    
+CREATE TABLE reserva(    
     dt_inicial DATE,  -- Data inicial da reserva
     dt_final DATE,  -- Data final da reserva
     cpf VARCHAR(11),  -- CPF do cliente que fez a reserva
     id_quarto INT,  -- ID do quarto reservado
     CONSTRAINT fk_res_cli FOREIGN KEY (cpf) REFERENCES cliente (cpf),  -- Restrição de chave estrangeira para cliente
     CONSTRAINT fk_res_qua FOREIGN KEY (id_quarto) REFERENCES quarto (id_quarto)  -- Restrição de chave estrangeira para quarto
-
 );
 
 -- TO DO// tabela serviços
@@ -48,8 +44,7 @@ CREATE TABLE servico (
 );
 
 -- Criação da tabela categoria
-CREATE TABLE categoria 
-( 
+CREATE TABLE categoria( 
     id_categoria INT PRIMARY KEY AUTO_INCREMENT,  -- ID da categoria como chave primária e auto-incremento
     idservico INT, -- Chave estrangeira referenciando a categoria do servico
     descricao VARCHAR(200) NOT NULL,  -- Descrição da categoria
