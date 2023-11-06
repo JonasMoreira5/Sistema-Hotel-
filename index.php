@@ -8,37 +8,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Jonas Moreira">
     <title>Hotel & Pousada</title>
+    <link rel="shortcut icon" href="assets\img\hotel-icone.png">
 
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="./assets/css/style.css" -->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <style>
-    @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-            font-size: 3.5rem;
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
         }
-    }
 
-    .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-    }
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
 
-    .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-    }
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
 
-    .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-    }
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
     </style>
 
     <!-- Custom styles for this template -->
@@ -53,8 +54,7 @@
         <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                 <!-- adicionar imagem da logo -->
-                <img src="assets\img\hotel-logo.jpg" class="figure-img img-fluid rounded me-4"
-                    style="width: 100px; height: 100px" alt="">
+                <img src="assets\img\hotel-logo.jpg" class="figure-img img-fluid rounded me-4" style="width: 100px; height: 100px" alt="">
                 <span class="fs-4">Hotel & Pousada</span>
             </a>
             <hr>
@@ -126,8 +126,7 @@
             </ul>
             <hr>
             <div class="dropdown">
-                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                    data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="assets\img\funcionario.png" alt="img" width="32" height="32" class="rounded-circle me-2">
                     <strong>Funcionário</strong>
                 </a>
@@ -148,77 +147,80 @@
             <div class="row">
                 <div class="col mt-5">
                     <?php
-                        include("config.php");
-                        switch(@$_REQUEST["page"]){
-                            case "novo_cliente":
-                                include("novo-cliente.php");
-                                break;
-                            case "listar_cliente":
-                                include("listar-cliente.php");
-                                break;
-                            case "salvar_cliente":
-                                include("salvar-cliente.php");
-                                break;
-                            case "editar_cliente":
-                                include("editar-cliente.php");
-                                break;
-                            case "nova_categoria":
-                                include("nova-categoria.php");
-                                break;
-                            case "listar_categoria":
-                                include("listar-categoria.php");
-                                break;
-                            case "salvar_categoria":
-                                include("salvar-categoria.php");
-                                break;
-                            case "editar_categoria":
-                                include("editar-categoria.php");
-                                break;
-                            case "novo_quarto":
-                                include("novo-quarto.php");
-                                break;
-                            case "listar_quarto":
-                                include("listar-quarto.php");
-                                break;
-                            case "salvar_quarto":
-                                include("salvar-quarto.php");
-                                break;
-                            case "editar_quarto":
-                                include("editar-quarto.php");
-                                break;
-                            case "nova_reserva":
-                                include("nova-reserva.php");
-                                break;
-                            case "listar_reserva":
-                                include("listar-reserva.php");
-                                break;
-                            case "salvar_reserva":
-                                include("salvar-reserva.php");
-                                break;
-                            case "editar_reserva":
-                                include("editar-reserva.php");
-                                break;
-                            case "abrir-config":
-                                include("configuracao.php");
-                                break;
-                            case "listar_servico":
-                                include("listar-servico.php");
-                                break;
-                            case "novo_servico":
-                                include("novo-servico.php");
-                                break;
-                            default:
-                             ?>
-                    <div class="row marcador align-items-center">
-                        <div class="col mx-auto text-center">
-                            <figure class="figure">
-                                <img src="assets\img\logo.png" class="figure-img img-fluid rounded" style="width: 150px; height: 150px" alt="...">
-                            </figure>
-                        </div>
-                    </div>
-                    
+                    include("config.php");
+                    switch (@$_REQUEST["page"]) {
+                        case "novo_cliente":
+                            include("novo-cliente.php");
+                            break;
+                        case "listar_cliente":
+                            include("listar-cliente.php");
+                            break;
+                        case "salvar_cliente":
+                            include("salvar-cliente.php");
+                            break;
+                        case "editar_cliente":
+                            include("editar-cliente.php");
+                            break;
+                        case "nova_categoria":
+                            include("nova-categoria.php");
+                            break;
+                        case "listar_categoria":
+                            include("listar-categoria.php");
+                            break;
+                        case "salvar_categoria":
+                            include("salvar-categoria.php");
+                            break;
+                        case "editar_categoria":
+                            include("editar-categoria.php");
+                            break;
+                        case "novo_quarto":
+                            include("novo-quarto.php");
+                            break;
+                        case "listar_quarto":
+                            include("listar-quarto.php");
+                            break;
+                        case "salvar_quarto":
+                            include("salvar-quarto.php");
+                            break;
+                        case "editar_quarto":
+                            include("editar-quarto.php");
+                            break;
+                        case "nova_reserva":
+                            include("nova-reserva.php");
+                            break;
+                        case "listar_reserva":
+                            include("listar-reserva.php");
+                            break;
+                        case "salvar_reserva":
+                            include("salvar-reserva.php");
+                            break;
+                        case "editar_reserva":
+                            include("editar-reserva.php");
+                            break;
+                        case "abrir-config":
+                            include("configuracao.php");
+                            break;
+                        case "listar_servico":
+                            include("listar-servico.php");
+                            break;
+                        case "novo_servico":
+                            include("novo-servico.php");
+                            break;
+                        default:
+                    ?>
+                            <div class="row marcador align-items-center">
+                                <div class="col mx-auto text-center">
+                                    <figure class="figure">
+                                        <h1>
+                                            Bem vindo ao Hotel & Pousada 
+                                        </h1>
+                                        <img src="assets\img\hotel-icone.png" class="img-fluid rounded" style="width: 150px; height: 150px" alt="...">
+                                    </figure>
+                                </div>
+                            </div>
+
                     <?php
-                            }
+                    }
                     ?>
 
                 </div>
