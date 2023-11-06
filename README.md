@@ -1,10 +1,12 @@
-## Sistema de Hotel para  a disciplina de Sistema de Banco de Dados I
+## Projeto de Criação de Sistema de Gerênciamento de um Hotel para a disciplina de Sistema de Banco de Dados I
+## Sobre o Projeto
+Este projeto foi desenvolvido tecnicamente por **Jonas Moreira Barbosa** : [linkedin]( https://www.linkedin.com/in/jonas-moreira28 ) - [github]( https://github.com/JonasMoreira5/JonasMoreira5 ) e **Vitor Vasconcelos** : [ linkedin ]( https://www.linkedin.com/in/jonas-moreira28 ) -[ github ]( https://github.com/JonasMoreira5/JonasMoreira5 ) como solução para o projeto final da Disciplina de Bancos de Dados I do Instituto de Ciências Exatas e Tecnologia - ICET-UFAM.
+
+## Etapas para o desenvolvimento do projeto
 - Modelo Conceitual
 - Modelo Lógico
 - Modelo Físico
 #
-## Sobre o Projeto
-Este projeto foi desenvolvido tecnicamente por **Jonas Moreira Barbosa** : [linkedin]( https://www.linkedin.com/in/jonas-moreira28 ) - [github]( https://github.com/JonasMoreira5/JonasMoreira5 ) e **Vitor Vasconcelos** : [ linkedin ]( https://www.linkedin.com/in/jonas-moreira28 ) -[ github ]( https://github.com/JonasMoreira5/JonasMoreira5 ) como solução para o projeto final da Disciplina de Bancos de Dados I do Instituto de Ciências Exatas e Tecnologia - ICET-UFAM.
 
 ### Tecnologias utilizadas
 - MySQL
@@ -17,3 +19,5 @@ Este projeto foi desenvolvido tecnicamente por **Jonas Moreira Barbosa** : [link
 - test: tudo o que for relacionado a testes
 - docs: tudo o que for relacionado à documentação
 - chore: manutenção regular do código.
+
+[![ Licença MIT ]( https://img.shields.io/badge/License-MIT-green.svg )]( https://choosealicense.com/licenses/mit/ )
