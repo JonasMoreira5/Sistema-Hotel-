@@ -1,12 +1,5 @@
 <h1>Novo serviço</h1>
 
-<script>
-    // JavaScript para formatar o valor inserido no campo "valor" para duas casas decimais
-    document.getElementById("valor").addEventListener("change", function() {
-        this.value = parseFloat(this.value).toFixed(2);
-    });
-</script>
-
 <?php
 // Consulta para buscar todas as categorias
 $sql = "SELECT * FROM categoria";
@@ -19,7 +12,7 @@ $qtd = $res->num_rows;
 ?>
 
 <!-- Formulário para adicionar um novo serviço -->
-<form action="?page=novo_servico" method="post">
+<form action="?page=salvar_servico" method="post">
     <!-- Campo oculto para definir a ação como "cadastrar" -->
     <input type="hidden" name="acao" value="cadastrar">
 
@@ -35,7 +28,7 @@ $qtd = $res->num_rows;
         <input type="number" name="valor" step="0.010" min="0" max="9999" class="form-control">
     </div>
 
-    <!-- Dropdown para seleção de Categoria
+    <!-- Dropdown para seleção de Categoria-->
     <div class="mb-5">
         <label>Categoria:</label>
         <select name="categoria" required="required"  class="form-control">
@@ -46,7 +39,7 @@ $qtd = $res->num_rows;
             <option value="<?php print $row->cat_id ?>"><?php print $row->descricao ?></option>
             <?php } ?>
         </select>
-    </div> -->
+    </div>
 
     <!-- Botão para enviar o formulário -->
     <button type="submit" class="btn btn-primary">Salvar</button>
