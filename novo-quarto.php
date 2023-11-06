@@ -10,7 +10,7 @@ $res = $conn->query($sql);
 // Obtém a quantidade de categorias retornadas
 $qtd = $res->num_rows;
 ?>
-<form action="?page=salvar_quarto" method="POST">
+<!-- <form action="?page=salvar_quarto" method="POST"> -->
 
 <form action="?page=salvar_quarto" method="post">
 
