@@ -13,7 +13,7 @@ CREATE TABLE Funcionario
     nome VARCHAR(200) NOT NULL,  -- Nome do Funcionario
     cpf_fun VARCHAR(11) PRIMARY KEY,  -- CPF do Funcionario que fez a reserva como chave primária
     login VARCHAR(255) NOT NULL, -- login do Fucionario
-    senha VARCHAR(255) NOT NULL,  -- senha do Funcionario
+    senha VARCHAR(255) NOT NULL  -- senha do Funcionario
 );
 
 
@@ -42,8 +42,8 @@ CREATE TABLE reserva
 CREATE TABLE servico (
     cod_servico INT PRIMARY KEY AUTO_INCREMENT,
     tipo_servico VARCHAR(100) NOT NULL,
-    valor_servico DECIMAL(4,2) NOT NULL
-    cat_id INT -- Chave estrangeira referenciando o servico da categoria
+    valor_servico DECIMAL(4,2) NOT NULL,
+    cat_id INT, -- Chave estrangeira referenciando o servico da categoria
     CONSTRAINT fk_cat_id FOREIGN KEY (cat_id) REFERENCES categoria (idservico)  -- Restrição de chave estrangeira
 );
 
