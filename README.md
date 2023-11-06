@@ -5,7 +5,7 @@
 
 - Modelo Físico
 #
-### Especifique o tipo de commit
+### Especificação de commit
 - feat: uma nova feature (recurso) que você está adicionando a uma aplicação específica
 - fix: a resolução de um bug
 - style: recurso e atualizações relacionadas à estilização
