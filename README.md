@@ -1,4 +1,4 @@
-![ ] ( ./src/assets/logo-readme.jpg )
+![ ] ( assets\img\hotel-icone.png )
 
 ## Sistema de Gerênciamento de um Hotel
 ## Sobre o Projeto
