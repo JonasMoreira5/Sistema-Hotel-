@@ -8,10 +8,12 @@ Este projeto foi desenvolvido tecnicamente por **Jonas Moreira Barbosa** : [link
 - Modelo Físico
 #
 
-### Tecnologias utilizadas
+## Tecnologias utilizadas
 - MySQL
 - PHP
-### Especificação de commit
+- XAMPP
+  
+## Especificação de commit
 - feat: uma nova feature (recurso) que você está adicionando a uma aplicação específica
 - fix: a resolução de um bug
 - style: recurso e atualizações relacionadas à estilização
