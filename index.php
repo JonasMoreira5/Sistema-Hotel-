@@ -48,7 +48,7 @@
 
 <body>
 
-    <div class="d-flex flex-nowrap">
+    <div class="d-flex flex-nowrap bg-light-subtle">
         <!-- Conteúdo da barra lateral -->
 
         <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
@@ -218,7 +218,6 @@
                                     </figure>
                                 </div>
                             </div>
-
                     <?php
                     }
                     ?>
