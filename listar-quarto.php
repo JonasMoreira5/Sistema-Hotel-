@@ -25,7 +25,7 @@
         // Loop para exibir cada registro em uma linha da tabela
         while($row = $res->fetch_object()){
             print "<tr>";
-            print "<td>".$row->desc_quarto."</td>";
+            print "<td>".$row->desc_quarto."</td>   ";
             print "<td>".$row->desc_cat."</td>";
             print "<td>".$row->valor."</td>";
             print "<td>
