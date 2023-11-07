@@ -208,6 +208,8 @@
                             break;
                         case "salvar_servico":
                             include("salvar-servico.php");
+                        case "editar_servico":
+                            include("editar-servico.php");
                             break;
                         default:
                     ?>
