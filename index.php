@@ -207,7 +207,7 @@
                             include("novo-servico.php");
                             break;
                         case "salvar_servico":
-                            include("salvar-servico");
+                            include("salvar-servico.php");
                             break;
                         default:
                     ?>
