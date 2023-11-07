@@ -36,8 +36,8 @@ if ($qtd > 0) {
             print "<td>" . $row->dt_inicial . "</td>";
             print "<td>" . $row->dt_final . "</td>";
             print "<td>
-                <button onclick=\"location.href='?page=editar_reserva&id=" . $row->descricao . "'\" class='btn btn-success'>Editar</button>
-                <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=editar_reserva&acao=excluir&id=" . $row->descricao . "'}else{false;}\" class='btn btn-danger'>Excluir</button>
+                <button onclick=\"location.href='?page=listar_reserva&id=" . $row->descricao . "'\" class='btn btn-success'>Editar</button>
+                <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=listar_reserva&acao=excluir&id=" . $row->descricao . "'}else{false;}\" class='btn btn-danger'>Excluir</button>
             </td>";
         print "</tr>";
     }

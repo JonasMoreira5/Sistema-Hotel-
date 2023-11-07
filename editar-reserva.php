@@ -1,33 +1,35 @@
 <h1>Editar Reserva </h1>
 
-
 <?php
 // Consulta SQL para obter a lista de reservas, juntamente com informações do cliente, quarto e categoria
-$sql = "SELECT c.nome AS nome, 
-               q.descricao AS descricao, 
-               DATE_FORMAT(r.dt_inicial, '%d/%m/%Y') AS dt_inicial, 
-               DATE_FORMAT(r.dt_final, '%d/%m/%Y') AS dt_final, 
-               cat.valor 
-        FROM reserva AS r
-        INNER JOIN cliente AS c ON c.cpf=r.cpf
-        INNER JOIN quarto AS q ON q.id_quarto=r.id_quarto
-        INNER JOIN categoria AS cat ON cat.id_categoria=q.idcategoria";
+// Consulta para buscar todos os clientes
+$sql_cliente = "SELECT * FROM cliente";
+
+// Consulta para buscar todos os quartos e suas categorias
+$sql_quarto = "SELECT q.id_quarto, q.descricao AS desc_quarto, c.descricao AS desc_categoria, c.valor 
+               FROM quarto AS q
+               INNER JOIN categoria AS c ON c.id_categoria=q.idcategoria";
 // Executando a consulta e armazenando o resultado
-$res = $conn->query($sql);
+// $res = $conn->query($sql);
 
-// Buscando o objeto da categoria do resultado
-$qtd = $res->num_rows;
+// // Buscando o objeto da categoria do resultado
+// $qtd = $res->num_rows;
 
+// Executa as consultas
+$res_cliente = $conn->query($sql_cliente);
+$res_quarto = $conn->query($sql_quarto);
 ?>
 
 <!-- Formulario para editar a reserva -->
 <form action="?page=salvar_reserva" method="POST">
     <input type="hidden" name="acao" value="editar">
 
+
     <!-- Campo para Data de Entrada -->
     <div class="mb-3">
         <label>Data de Entrada:</label>
         <input type="date" name="entrada" class="form-control">
+
     </div>
 
     <!-- Campo para Data de Saída -->
@@ -36,8 +38,8 @@ $qtd = $res->num_rows;
         <input type="date" name="saida" class="form-control">
     </div>
 
-    <!-- Dropdown para seleção de Cliente -->
-    <div class="mb-3">
+     <!-- Dropdown para seleção de Cliente -->
+     <div class="mb-3">
         <label>Cliente:</label>
         <select name="cliente" required class="form-control">
             <option value="" selected>Selecione o cliente</option>
@@ -49,9 +51,8 @@ $qtd = $res->num_rows;
         </select>
     </div>
 
-
-    <!-- Dropdown para seleção de Quarto -->
-    <div class="mb-3">
+     <!-- Dropdown para seleção de Quarto -->
+     <div class="mb-3">
         <label>Quarto:</label>
         <select name="quarto" required class="form-control">
             <option value="" selected>Selecione o quarto</option>
