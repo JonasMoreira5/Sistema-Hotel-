@@ -73,24 +73,24 @@ switch ($_REQUEST["acao"]) {
         // break;
 
         //     // Caso a ação seja 'excluir'
-        //     case 'excluir':
+            case 'excluir':
 
-        //         // Cria a consulta SQL para excluir o registro do cliente com base no CPF
-        //         $sql = "DELETE FROM cliente WHERE cpf=".$_REQUEST["id"];
+                // Cria a consulta SQL para excluir o registro do cliente com base no CPF
+                $sql = "DELETE FROM cliente WHERE id_cliente=".$_REQUEST["id"];
 
-        //         // Executa a consulta SQL
-        //         $res = $conn->query($sql);
+                // Executa a consulta SQL
+                $res = $conn->query($sql);
 
-        //         // Verifica se a consulta foi bem-sucedida
-        //         if ($res == true) {
-        //             // Exibe uma mensagem de sucesso e redireciona para a página de listagem de clientes
-        //             print "<script>alert('Excluido com sucesso!')</script>";
-        //             print "<script>location.href='?page=listar_cliente';</script>";
-        //         } else {
-        //             // Exibe uma mensagem de erro e redireciona para a página de listagem de clientes
-        //             print "<script>alert('Erro ao excluir!')</script>";
-        //             print "<script>location.href='?page=listar_cliente';</script>";
-        //         }
-        //         break;
+                // Verifica se a consulta foi bem-sucedida
+                if ($res == true) {
+                    // Exibe uma mensagem de sucesso e redireciona para a página de listagem de clientes
+                    print "<script>alert('Excluido com sucesso!')</script>";
+                    print "<script>location.href='?page=listar_cliente';</script>";
+                } else {
+                    // Exibe uma mensagem de erro e redireciona para a página de listagem de clientes
+                    print "<script>alert('Erro ao excluir!')</script>";
+                    print "<script>location.href='?page=listar_cliente';</script>";
+                }
+                break;
         // }
 }
