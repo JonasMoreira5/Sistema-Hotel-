@@ -28,8 +28,7 @@ $res_quarto = $conn->query($sql_quarto);
     <!-- Campo para Data de Entrada -->
     <div class="mb-3">
         <label>Data de Entrada:</label>
-        <input type="date" name="entrada" class="form-control">
-
+        <input type="date" name="entrada" value="<?php print $row->dt_inicial;?>" class="form-control" >
     </div>
 
     <!-- Campo para Data de Saída -->
@@ -44,7 +43,7 @@ $res_quarto = $conn->query($sql_quarto);
         <select name="cliente" required class="form-control">
             <option value="" selected>Selecione o cliente</option>
             <?php while ($row_cliente = $res_cliente->fetch_object()) { ?>
-                <option value="<?php echo $row_cliente->cpf; ?>">
+                <option value="<?php print $row_cliente->id_cliente; ?>">
                     <?php echo $row_cliente->nome; ?>
                 </option>
             <?php } ?>
@@ -57,7 +56,7 @@ $res_quarto = $conn->query($sql_quarto);
         <select name="quarto" required class="form-control">
             <option value="" selected>Selecione o quarto</option>
             <?php while ($row_quarto = $res_quarto->fetch_object()) { ?>
-                <option value="<?php echo $row_quarto->id_quarto; ?>">
+                <option value="<?php  $row_quarto->id_quarto; ?>">
                     <?php echo $row_quarto->desc_quarto . ' - ' . $row_quarto->desc_categoria . ' - ' . $row_quarto->valor; ?>
                 </option>
             <?php } ?>

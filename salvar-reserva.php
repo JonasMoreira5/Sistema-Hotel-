@@ -7,7 +7,7 @@ switch ($_REQUEST["acao"]) {
         $cliente = $_POST["cliente"];
         $quarto = $_POST["quarto"];
 
-        $sql = "insert into reserva (dt_inicial, dt_final, cpf, id_quarto) values ('{$entrada}','{$saida}','{$cliente}','{$quarto}')";
+        $sql = "insert into reserva (dt_inicial, dt_final, idcliente, idquarto) values ('{$entrada}','{$saida}','{$cliente}','{$quarto}')";
 
         $res = $conn->query($sql);
 
@@ -27,7 +27,7 @@ switch ($_REQUEST["acao"]) {
         $quarto = $_POST["quarto"];
 
         //$sql = "UPDATE reserva SET (dt_inicial, dt_final, cpf, id_quarto) VALUES ('{$entrada}','{$saida}','{$cliente}','{$quarto}')";
-        $sql = "UPDATE reserva SET dt_inicial='{$entrada}', dt_final='{$saida}', cpf='{$cliente}', quarto='{$quarto}'  WHERE cpf=" . $_REQUEST["id"];
+        $sql = "UPDATE reserva SET dt_inicial='{$entrada}', dt_final='{$saida}', id_cliente='{$cliente}', quarto='{$quarto}'  WHERE id_cliente=" . $_REQUEST["id"];
 
         $res = $conn->query($sql);
 
