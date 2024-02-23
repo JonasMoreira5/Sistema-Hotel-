@@ -9,11 +9,8 @@
     <meta name="author" content="Jonas Moreira">
     <title>Hotel & Pousada</title>
     <link rel="shortcut icon" href="assets\img\hotel-icone.png">
-
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="./assets/css/style.css" -->
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
     <style>
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
