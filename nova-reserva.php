@@ -35,7 +35,7 @@ $res_quarto = $conn->query($sql_quarto);
         <select name="cliente" required class="form-control">
             <option value="" selected>Selecione o cliente</option>
             <?php while ($row_cliente = $res_cliente->fetch_object()) { ?>
-                <option value="<?php echo $row_cliente->cpf; ?>">
+                <option value="<?php echo $row_cliente->id_cliente; ?>">
                     <?php echo $row_cliente->nome; ?>
                 </option>
             <?php } ?>

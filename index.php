@@ -105,36 +105,12 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="?page=nova_categoria">Nova</a></li>
-                        <li><a class="dropdown-item" href="?page=listar_categoria">Listar</a></li>
+                        <!-- <li><a class="dropdown-item" href="?page=listar_categoria">Listar</a></li> -->
                     </ul>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown text-white" href="#" role="button" data-bs-toggle="dropdown">
-                        <!-- <i class="bi bi-person-badge me-2"></i> -->
-                        <i class="bi bi-text-left me-2"></i>
-                        Serviços
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="?page=novo_servico">Novo</a></li>
-                        <li><a class="dropdown-item" href="?page=listar_servico">Listar</a></li>
-                    </ul>
-                </li>
             </ul>
             <hr>
-            <div class="dropdown">
-                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="assets\img\funcionario.png" alt="img" width="32" height="32" class="rounded-circle me-2">
-                    <strong>Funcionário</strong>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                    <li><a class="dropdown-item" href="?page=abrir-config">Configurações</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="?page=sair-modulo">Ir para Home</a></li>
-                </ul>
-            </div>
         </div>
         <div class="b-example-divider b-example-vr"></div>
         <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -197,26 +173,16 @@
                         case "abrir-config":
                             include("configuracao.php");
                             break;
-                        case "listar_servico":
-                            include("listar-servico.php");
-                            break;
-                        case "novo_servico":
-                            include("novo-servico.php");
-                            break;
-                        case "salvar_servico":
-                            include("salvar-servico.php");
-                        case "editar_servico":
-                            include("editar-servico.php");
-                            break;
+    
                         default:
                     ?>
                             <div class="row marcador align-items-center">
                                 <div class="col mx-auto text-center">
                                     <figure class="figure">
                                         <h1>
-                                            Bem vindo ao Hotel & Pousada 
+                                            Hotel Hackathon 
                                         </h1>
-                                        <img src="assets\img\hotel-icone.png" class="img-fluid rounded" style="width: 150px; height: 150px" alt="...">
+                                        <img src="#" class="img-fluid rounded" style="width: 150px; height: 150px" alt="...">
                                     </figure>
                                 </div>
                             </div>

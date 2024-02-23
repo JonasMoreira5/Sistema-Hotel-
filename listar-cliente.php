@@ -15,26 +15,22 @@
     if ($qtd > 0){
         print "<table class='table table-hover'>";
             print "<tr>";
-            print "<th>CPF:</th>";
             print "<th>Nome:</th>";
-            print "<th>Telefone:</th>";
             print "<th>E-mail:</th>";
             print "<th>Ações</th>";
             print "</tr>";
         // Loop para exibir cada registro em uma linha da tabela
         while($row = $res->fetch_object()){
             print "<tr>";
-            print "<td>".$row->cpf."</td>";
             print "<td>".$row->nome."</td>";
-            print "<td>".$row->contato."</td>";
             print "<td>".$row->email."</td>";
             print "<td>
             
             <!-- Botão para editar o cliente -->
-            <button onclick=\"location.href='?page=editar_cliente&id=".$row->cpf."'\" class='btn btn-success'>Editar</button>
+            <button onclick=\"location.href='?page=editar_cliente&id=".$row->id_cliente."'\" class='btn btn-success'>Editar</button>
             
             <!-- Botão para excluir o cliente com confirmação -->
-            <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar_cliente&acao=excluir&id=".$row->cpf."'}else{false;}\"
+            <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar_cliente&acao=excluir&id=".$row->id_cliente."'}else{false;}\"
             class='btn btn-danger'>Excluir</button>
             
                 </td>";

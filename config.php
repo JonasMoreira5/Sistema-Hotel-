@@ -14,6 +14,8 @@ if ($conn->connect_errno) {
     echo "Falha ao conectar: (" . $conn->connect_errno . ") " . $conn->connect_error;
 } else {
     // Caso queira exibir uma mensagem quando a conexão for bem-sucedida, descomente a linha abaixo
-    // echo "Conectado ao Banco de Dados";
+    echo "Conectado ao Banco de Dados";
 }
 ?>
+
+
