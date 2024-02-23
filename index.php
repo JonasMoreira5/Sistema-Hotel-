@@ -108,7 +108,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="?page=nova_categoria">Nova</a></li>
-                        <li><a class="dropdown-item" href="?page=listar_categoria">Listar</a></li>
+                        <!-- <li><a class="dropdown-item" href="?page=listar_categoria">Listar</a></li> -->
                     </ul>
                 </li>
 
